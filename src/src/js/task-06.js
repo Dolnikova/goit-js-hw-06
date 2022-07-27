@@ -2,12 +2,16 @@ const input = document.getElementById("validation-input");
 let totalLenght = input.getAttribute("data-length");
 let intTotallenght = parseInt(totalLenght, 10);
 input.oninput = function () {
-  input.value.length === intTotallenght ? addValid : removeValid;
+  if (input.value.length === intTotallenght) {
+    input.classList.remove("invalid");
+    input.classList.add("valid");
+  } else if (input.value.length === 0) {
+    input.classList.remove("valid");
+    input.classList.remove("invalid");
+  } else if (
+    input.value.length !== intTotallenght &&
+    input.value.length !== 0
+  ) {
+    input.classList.add("invalid");
+  }
 };
-function addValid() {
-  input.classList.remove("invalid");
-  input.classList.add("valid");
-}
-function removeValid() {
-  input.classList.add("invalid");
-}
