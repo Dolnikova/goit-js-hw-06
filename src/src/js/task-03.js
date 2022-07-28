@@ -1,4 +1,3 @@
-"use strict";
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -16,6 +15,17 @@ const images = [
 
 const galleryList = document.querySelector(".gallery");
 const ulList = images
-  .map((image) => `<li><img src="${image.url}" alt="${image.alt}"/></li>`)
+  .map(
+    (image) =>
+      `<li><img class="picture" src="${image.url}" width = "500" alt="${image.alt}"/></li>`
+  )
   .join("");
-galleryList.insertAdjacentHTML("afterbegin", ulList);
+galleryList.insertAdjacentHTML("beforeend", ulList);
+
+const pictures = document.querySelectorAll(".picture");
+
+galleryList.style.display = "flex";
+galleryList.style.flexWrap = "column-reverse";
+galleryList.style.listStyle = "none";
+galleryList.style.gap = "10px";
+galleryList.style.justifyContent = "center";
