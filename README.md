@@ -65,14 +65,24 @@ Elements: 5
 В JavaScript есть массив строк.
 
 const ingredients = [
+<<<<<<< HEAD
 'Potatoes',
 'Mushrooms',
 'Garlic',
 'Tomatos',
 'Herbs',
 'Condiments',
-];
-Напиши скрипт, который для каждого элемента массива ingredients:
+=======
+'Potatoes',
+'Mushrooms',
+'Garlic',
+'Tomatos',
+'Herbs',
+'Condiments',
+
+> > > > > > > 53ee13811be42871cea160dab39b8c257dc0d5c2
+> > > > > > > ];
+> > > > > > > Напиши скрипт, который для каждого элемента массива ingredients:
 
 Создаст отдельный элемент <li>. Обзательно используй метод document.createElement().
 Добавит название ингредиента как его текстовое содержимое.
@@ -87,6 +97,7 @@ const ingredients = [
 Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы.
 const images = [
+<<<<<<< HEAD
 {
 url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260',
 alt: 'White and Black Long Fur Cat',
@@ -99,9 +110,24 @@ alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
 url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260',
 alt: 'Group of Horses Running',
 },
-];
-Задание 4
-Счетчик состоит из спана и кнопок, которые, при клике, должны увеличивать и уменьшать его значение на единицу.
+=======
+{
+url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260',
+alt: 'White and Black Long Fur Cat',
+},
+{
+url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260',
+alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+},
+{
+url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260',
+alt: 'Group of Horses Running',
+},
+
+> > > > > > > 53ee13811be42871cea160dab39b8c257dc0d5c2
+> > > > > > > ];
+> > > > > > > Задание 4
+> > > > > > > Счетчик состоит из спана и кнопок, которые, при клике, должны увеличивать и уменьшать его значение на единицу.
 
 <div id="counter">
   <button type="button" data-action="decrement">-1</button>
@@ -130,6 +156,7 @@ alt: 'Group of Horses Running',
 Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
 
 #validation-input {
+<<<<<<< HEAD
 border: 3px solid #bdbdbd;
 }
 
@@ -139,9 +166,21 @@ border-color: #4caf50;
 
 #validation-input.invalid {
 border-color: #f44336;
+=======
+border: 3px solid #bdbdbd;
 }
-Задание 7
-Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input) и изменяет инлайн-стиль span#text обновляя свойство font-size. В результате при перетаскивании ползунка будет меняться размер текста.
+
+#validation-input.valid {
+border-color: #4caf50;
+}
+
+#validation-input.invalid {
+border-color: #f44336;
+
+> > > > > > > 53ee13811be42871cea160dab39b8c257dc0d5c2
+> > > > > > > }
+> > > > > > > Задание 7
+> > > > > > > Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input) и изменяет инлайн-стиль span#text обновляя свойство font-size. В результате при перетаскивании ползунка будет меняться размер текста.
 
 <input id="font-size-control" type="range" min="16" max="96" />
 <br />
@@ -175,10 +214,15 @@ border-color: #f44336;
 Для генерации случайного цвета используй функцию getRandomHexColor.
 
 function getRandomHexColor() {
+<<<<<<< HEAD
 return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-Задание 10 (выполнять не обязательно)
-Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит количество элементов в input и нажимает кнопку Создать, после чего рендерится коллекция. При нажатии на кнопку Очистить, коллекция элементов очищается.
+=======
+return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+> > > > > > > 53ee13811be42871cea160dab39b8c257dc0d5c2
+> > > > > > > }
+> > > > > > > Задание 10 (выполнять не обязательно)
+> > > > > > > Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит количество элементов в input и нажимает кнопку Создать, после чего рендерится коллекция. При нажатии на кнопку Очистить, коллекция элементов очищается.
 
 <div id="controls">
   <input type="number" min="1" max="100" step="1" />
@@ -193,6 +237,11 @@ return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 Каждый элемент после первого, должен быть шире и выше предыдущего на 10px.
 Все элементы должены иметь случайный цвет фона в формате HEX. Используй готовую функцию getRandomHexColor для получения цвета.
 function getRandomHexColor() {
+<<<<<<< HEAD
 return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы.
+=======
+return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+> > > > > > > 53ee13811be42871cea160dab39b8c257dc0d5c2
+> > > > > > > }
+> > > > > > > Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы.
